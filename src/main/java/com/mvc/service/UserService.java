@@ -14,4 +14,7 @@ public interface UserService {
 	
 	void delete(int id);
 	
+	//登入確認
+	String logincheck(String account, String password);
+	
 }

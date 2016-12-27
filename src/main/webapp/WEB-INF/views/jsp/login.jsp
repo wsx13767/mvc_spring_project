@@ -20,15 +20,16 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="<c:url value="/login/logincheck"/>">
-							<input type="text" name="account" placeholder="Name" />
+						<form id="loginform" method="post">
+							<input type="text" name="name" placeholder="Name" />
 							<input type="password" name="password" placeholder="password" />
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
 							</span>
-							<button type="submit" class="btn btn-default">Login</button>
+							<button type="button" class="btn btn-default" onclick="login()">Login</button>
 						</form>
+						<div id="loginError"></div>
 					</div><!--/login form-->
 				</div>
 				<div class="col-sm-1">

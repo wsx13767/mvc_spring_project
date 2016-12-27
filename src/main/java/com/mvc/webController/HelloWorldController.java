@@ -17,7 +17,11 @@ public class HelloWorldController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(HttpSession session, Model model) {
-//		return "redirect:/Hello";
+		return "/index";
+	}
+	
+	@RequestMapping(method = RequestMethod.POST)
+	public String indexPost(HttpSession session, Model model) {
 		return "/index";
 	}
 	

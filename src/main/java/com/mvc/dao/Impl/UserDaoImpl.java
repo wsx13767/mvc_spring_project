@@ -162,19 +162,20 @@ public class UserDaoImpl implements UserDao {
 	}
 	
 	//登入
-	public String logincheck(String account, String password) {
-		String result = "false";
+	public boolean logincheck(String account, String password) {
+		boolean result = false;
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("account", account);
 		params.put("password", password);
-		String sql = "SELECT * from users where name=:account and password=:password";
-		List<Map<String,Object>> data = namedParameterJdbcTemplate.queryForList(sql, params);
-		if (data.size() > 0) {
-			String name = data.get(0).get("name").toString();
-			String passworddb = data.get(0).get("password").toString();
-			if (name.equals(account) & passworddb.equals(password)) {
-				result = "success";
-			}
+		String sql = "SELECT * from users2 where account=:account and password=:password";
+		Map<String, Object> data = null; 
+		try {
+			data = namedParameterJdbcTemplate.queryForMap(sql, params);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		if (data != null) {
+			result = true;
 		}
 		return result;
 	}

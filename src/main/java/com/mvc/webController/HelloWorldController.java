@@ -1,5 +1,6 @@
 package com.mvc.webController;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 
@@ -7,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+
 
 
 
@@ -21,7 +24,7 @@ public class HelloWorldController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String indexPost(HttpSession session, Model model) {
+	public String indexPost(Model model,HttpServletRequest req) {
 		return "/index";
 	}
 	

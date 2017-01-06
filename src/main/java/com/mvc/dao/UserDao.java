@@ -16,5 +16,5 @@ public interface UserDao {
 
 	void delete(Integer id);
 
-	String logincheck(String account, String password);
+	boolean logincheck(String account, String password);
 }

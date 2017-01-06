@@ -21,7 +21,7 @@
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
 						<form id="loginform" method="post">
-							<input type="text" name="name" placeholder="Name" />
+							<input type="text" name="account" placeholder="Name" />
 							<input type="password" name="password" placeholder="password" />
 							<span>
 								<input type="checkbox" class="checkbox"> 

@@ -1,13 +1,13 @@
 package com.mvc.formBean;
 
-public class LoginFrom {
-	private String name;
+public class LoginFormBean {
+	private String account;
 	private String password;
-	public String getName() {
-		return name;
+	public String getAccount() {
+		return account;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setAccount(String account) {
+		this.account = account;
 	}
 	public String getPassword() {
 		return password;

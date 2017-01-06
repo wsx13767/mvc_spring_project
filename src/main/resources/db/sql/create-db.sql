@@ -13,3 +13,9 @@ CREATE TABLE users (
   COUNTRY VARCHAR(10),
   SKILL VARCHAR(500)
 );
+CREATE TABLE users2 (
+  account VARCHAR(10) PRIMARY KEY,
+  password VARCHAR(10),
+  sex VARCHAR(4),
+  name VARCHAR(10)
+);

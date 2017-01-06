@@ -2,6 +2,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<% 
+String account = "acount";
+String loginUrl = "/training-project/login";
+String loginOrLogout = "登入";
+String logout = "";
+if (request.getSession().getAttribute("login") != null) {
+	account = request.getSession().getAttribute("login").toString();
+	loginUrl = "#";
+	loginOrLogout = "登出";
+	logout = "logout();";
+}
+%>
+
 <header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -63,11 +76,11 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#"><i class="fa fa-user"></i><%=account%></a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="<c:url value="/cart"/>"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="<c:url value="/login"/>"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="<%=loginUrl %>" onclick="<%=logout %>"><i class="fa fa-lock"></i> <%=loginOrLogout %></a></li>
 							</ul>
 						</div>
 					</div>

@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public String logincheck(String account, String password) {
+	public boolean logincheck(String account, String password) {
 		return userDao.logincheck(account, password);
 	}
 

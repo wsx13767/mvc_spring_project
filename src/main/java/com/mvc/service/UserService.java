@@ -17,4 +17,7 @@ public interface UserService {
 	//登入確認
 	boolean logincheck(String account, String password);
 	
+	boolean accountCheck(String account);
+	
+	boolean register(String account, String password, String email);
 }

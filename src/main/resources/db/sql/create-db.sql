@@ -16,6 +16,7 @@ CREATE TABLE users (
 CREATE TABLE users2 (
   account VARCHAR(10) PRIMARY KEY,
   password VARCHAR(10),
+  email VARCHAR(50),
   sex VARCHAR(4),
   name VARCHAR(10)
 );

@@ -179,5 +179,42 @@ public class UserDaoImpl implements UserDao {
 		}
 		return result;
 	}
-
+	
+	//確認帳號是否重複
+	public boolean accountCheck(String account) {
+		boolean result = false;
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("account", account);
+		String sql = "SELECT * from users2 where account=:account";
+		Map<String, Object> data = null; 
+		try {
+			data = namedParameterJdbcTemplate.queryForMap(sql, params);
+		} catch (Exception e) {
+			System.out.print(e);
+		}
+		if (data != null) {
+			result = true;
+		}
+		return result;
+	}
+	
+	
+	//註冊
+	public boolean register(String account, String password, String email) {
+		boolean result = false;
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("account", account);
+		params.put("password", password);
+		params.put("email", email);
+		params.put("name", "");
+		String sql = "INSERT INTO users2(account, password, email, name) "
+				+ "VALUES (:account, :password, :email, :name)";
+		try {
+			namedParameterJdbcTemplate.update(sql, params);
+			result = true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return result;
+	}
 }

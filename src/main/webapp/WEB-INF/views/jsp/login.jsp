@@ -21,7 +21,7 @@
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
 						<form id="loginform" method="post">
-							<input type="text" name="account" placeholder="Name" />
+							<input type="text" name="account" placeholder="Account" />
 							<input type="password" name="password" placeholder="password" />
 							<span>
 								<input type="checkbox" class="checkbox"> 
@@ -38,12 +38,14 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<button type="submit" class="btn btn-default">Signup</button>
+						<form id="registerForm">
+							<input type="text" name="registerAccount" placeholder="Account"/>
+							<input type="email" name="email" placeholder="Email Address"/>
+							<input type="password" name="registerPassword" placeholder="Password"/>
+							<input type="password" name="registerPasswordCheck" placeholder="Password"/>
+							<button type="button" class="btn btn-default" onclick="register()">Signup</button>
 						</form>
+						<div id="registerMessage"></div>
 					</div><!--/sign up form-->
 				</div>
 			</div>

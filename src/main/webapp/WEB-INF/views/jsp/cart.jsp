@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
+<title>Cart</title>
 <jsp:include page="fragments/scriptInclude.jsp" />
 <jsp:include page="fragments/cssInclude.jsp" />
 </head>

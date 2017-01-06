@@ -49,5 +49,16 @@ public class UserServiceImpl implements UserService {
 	public boolean logincheck(String account, String password) {
 		return userDao.logincheck(account, password);
 	}
+	
+	@Override
+	public boolean accountCheck(String account) {
+		return userDao.accountCheck(account);
+	}
+	
+	
+	@Override
+	public boolean register(String account, String password, String email) {
+		return userDao.register(account, password, email);
+	}
 
 }

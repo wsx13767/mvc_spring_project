@@ -6,4 +6,4 @@
 <script src="<c:url value="resources/js/price-range.js"/> "></script>
 <script src="<c:url value="resources/js/jquery.prettyPhoto.js"/> "></script>
 <script src="<c:url value="resources/js/main.js"/> "></script>
-<script src="<c:url value="resources/js/myjs.js"/> "></script>
+<script src="<c:url value="resources/js/login.js"/> "></script>

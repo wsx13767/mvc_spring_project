@@ -4,11 +4,13 @@
 
 <% 
 String account = "acount";
+String accountPage = "";
 String loginUrl = "/training-project/login";
 String loginOrLogout = "登入";
 String logout = "";
 if (request.getSession().getAttribute("login") != null) {
 	account = request.getSession().getAttribute("login").toString();
+	accountPage = "accountPage();";
 	loginUrl = "#";
 	loginOrLogout = "登出";
 	logout = "logout();";
@@ -19,6 +21,7 @@ if (request.getSession().getAttribute("login") != null) {
 		<div class="header_top"><!--header_top-->
 			<div class="container">
 				<div class="row">
+					<form id="accountForm" method="post"></form>
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
@@ -75,8 +78,9 @@ if (request.getSession().getAttribute("login") != null) {
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
+							<input id="account" type="hidden" value="<%=account %>" />
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i><%=account%></a></li>
+								<li><a href="#" onclick="<%=accountPage %>"><i class="fa fa-user"></i><%=account%></a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="<c:url value="/cart"/>"><i class="fa fa-shopping-cart"></i> Cart</a></li>

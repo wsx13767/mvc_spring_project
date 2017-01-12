@@ -12,6 +12,7 @@
 <jsp:include page="jsp/fragments/cssInclude.jsp" />
 </head>
 <body>
+	<div id="test"></div>
 	<!-- header -->
 	<jsp:include page="jsp/fragments/header.jsp" />
 	<!-- 跑馬燈 -->

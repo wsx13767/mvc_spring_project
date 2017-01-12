@@ -1,6 +1,7 @@
 package com.mvc.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.mvc.model.User;
 
@@ -21,4 +22,6 @@ public interface UserDao {
 	boolean accountCheck(String account);
 	
 	boolean register(String account, String password, String email);
+	
+	Map<String, Object> accountInfo(String account);
 }

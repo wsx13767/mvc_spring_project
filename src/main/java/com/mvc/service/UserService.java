@@ -1,6 +1,7 @@
 package com.mvc.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.mvc.model.User;
 
@@ -20,4 +21,6 @@ public interface UserService {
 	boolean accountCheck(String account);
 	
 	boolean register(String account, String password, String email);
+	
+	Map<String, Object> accountInfo(String account);
 }

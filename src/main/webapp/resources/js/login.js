@@ -58,5 +58,23 @@ function register() {
 						"<strong>警告!</strong>" + data + "</div>");
 			}
 		}
-	})
+	});
+}
+
+
+function accountPage() {
+	$.ajax({
+		type : "post",
+		data : {account:$("#account").val()},
+		url : "/training-project/account/accountInfo",
+		cache: false,
+		dataType : 'json',
+		success : function (data) {
+//			$("#accountForm").attr("action","/training-project/account");
+//		    $("#accountForm").submit();
+				alert("");
+				console.log(data);
+
+		}
+	});
 }

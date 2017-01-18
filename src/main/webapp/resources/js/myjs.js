@@ -77,3 +77,7 @@ function accountPage() {
 		}
 	});
 }
+
+function detail(oId) {
+    $(".productForm"+oId).submit();
+}

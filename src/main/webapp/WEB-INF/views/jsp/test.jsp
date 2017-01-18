@@ -11,5 +11,8 @@
 </head>
 <body>
 	<h1><a href="<c:url value="/" />" >test</a></h1>
+	<c:forEach items="${test}" var="item">
+	<p>${item.a} + ${item.b} + ${item.c}</p>
+	</c:forEach>
 </body>
 </html>
